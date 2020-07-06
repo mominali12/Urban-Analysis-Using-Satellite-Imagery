@@ -40,7 +40,7 @@ Due to the unavailability of any previous planned/unplanned localities dataset, 
 ![](images/dataset/label_count.png)
 
 ## Methodology
-Our project is divided into three phases. In the first phase, semantic segmentation is incorporated, for building segmentation. The second phase of this project was dedicated towards finding important features that could help us classify localities as planned or unplanned developments. In the third phase we applied Analytical Hirearchical Processing
+Our project is divided into three phases. In the first phase, semantic segmentation is incorporated, for building segmentation. The second phase of this project was dedicated towards finding important features that could help us classify localities as planned or unplanned developments. In the third phase we applied Analytical Hirearchical Processing to get planned locality index corresponding to each image.
 
 ### Phase 1
 In this phase we filtered out images containing built structures using deep learning technique called semantic segmentation.
@@ -86,7 +86,7 @@ In order to train our task specific models more efficiently we used multi task l
 
 **Results**<br><br>
 ![](images/Results/phase2/Results_experiment3.png)
-<br><br>Architecture diagram for task specific models is as follow:<br><br>
+<br><br>Architecture diagram for  is as follow:<br><br>
 
 **Multi-task learning Model**<br><br>
 ![](/images/Architectures/phase2/experiment3.png)
