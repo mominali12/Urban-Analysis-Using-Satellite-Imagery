@@ -6,7 +6,7 @@ http://im.itu.edu.pk/deep-learning-spring-2020/
 For this research project we have used two different datasets.
 - We have used Village Finder dataset compiled by this [paper](http://tiny.cc/7ei1rz).Which can be found [here](https://drive.google.com/drive/folders/1REaNUpaD6Dm64v1FEDop20LgJtXvorXz?usp=sharing)
 
-- To train our multi task learning model we had compiled a separate data set containing satellite images of different cities of pakistan.We than manually labeled them for differnet features.Dataset along with its labels can be find [here](https://drive.google.com/drive/folders/1krdvIv_RydPIDkCCNyJoFycnCDAidp-K?usp=sharing)
+- To train our multi task learning model we had compiled a separate data set containing satellite images of different cities of pakistan.We than manually labeled them for diffrent features. Dataset along with its labels can be find [here](https://drive.google.com/drive/folders/1krdvIv_RydPIDkCCNyJoFycnCDAidp-K?usp=sharing)
 
 # Models
 All the Trained models for each tasks can be found [here](https://drive.google.com/file/d/1--uh8mXfwMKAH2pL24_yw6RMAC8h-fmu/view?usp=sharing)
@@ -15,7 +15,7 @@ All the Trained models for each tasks can be found [here](https://drive.google.c
 In this phase we filtered out images containing built structures using deep learning technique called semantic segmentation.
 
 #### Building Segmentation
-Semantic segmentation is process of labelling each pixel of an image belonging to similar class. Village Finder dataset was fed to U-net architecture for training purpose. In testing phase, Pakistan’s satellite images data is passed to this model which outputs only those images where buildings are present
+Semantic segmentation is process of labelling each pixel of an image belonging to similar class. Village Finder dataset was fed to U-net architecture for training purpose. In testing phase, Pakistan’s satellite images are passed to this model which outputs only those images where buildings are present
 
 <br><br>**Results**<br><br>
 ![](images/Results_phase1.png)
@@ -48,7 +48,7 @@ We designed separate models for each task. This allowed us to ensure that we don
 
 
 #### Multi-task Learning
-In order to train our task specific models more efficiently we used multi task learning<sup>[5]</sup>. This method allows different models to share weights with each other and allows the models to generalize better. We used trained VGG16 as backbone of the multi-task architecture and the sub-networks all had similar architecture except for the last dense layer of these subnets. In the last layer softmax with binary cross entropy was used for multi-class problems (prediction of building density, greenery sparsity and layout)  and sigmoid with categorical cross entropy was used for multi-label problem(Prediction of Exposed Soil, Large buildings grass and trees). Results obtained for different experiments are shown below:<br><br>
+In order to train our task specific models more efficiently we used multi task learning. This method allows different models to share weights with each other and allows the models to generalize better. We used trained VGG16 as backbone of the multi-task architecture and the sub-networks all had similar architecture except for the last dense layer of these subnets. In the last layer softmax with binary cross entropy was used for multi-class problems (prediction of building density, greenery sparsity and layout)  and sigmoid with categorical cross entropy was used for multi-label problem(Prediction of Exposed Soil, Large buildings grass and trees). Results obtained for different experiments are shown below:<br><br>
 
 **Results**<br><br>
 ![](images/Results_experiment3.png)
